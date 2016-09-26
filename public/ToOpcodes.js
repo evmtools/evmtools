@@ -30,6 +30,12 @@ function processsHexcode (_hexcode)
 
 $("#hexcode").bind("input propertychange", function() {
 
-    $("#opcodes").css("color", "red");
-    $("#opcodes").html("<em>#RETURN:</em>");
+    var i = 0;
+    var results = processsHexcode($("#hexcode").val());
+
+
+    while(i<results.length){
+        $("#opcodes").append("<tr><td>  "+asHex(results[i].pc)+"</td><td>  "+results[i].name+"</td><td>("+asHex(results[i].opcode)+")</td><td>  "+asHex(results[i].param) +"</td></tr>");
+        i++;
+    }
 });
