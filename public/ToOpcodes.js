@@ -2,15 +2,6 @@
 	From hex to opcodes
 */
 
-var executeParseCode=function(_code)
-{
-	var code = _code.replace(/^0x/, '').replace(/\s/g, '');
-		// Try to parse code
-		var bytes = _.chunk(code, 2).map((x) => x.join(''));
-
-		return parseCode(bytes);
-}
-
 /*
 //example
 
