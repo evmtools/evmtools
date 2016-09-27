@@ -28,14 +28,29 @@ function processsHexcode (_hexcode)
     ];*/
 }
 
-$("#hexcode").bind("input propertychange", function() {
+$("#target1").click( function() {
 
     var i = 0;
     var results = processsHexcode($("#hexcode").val());
-
-
+/*
+    $("#opcodes").html("");
     while(i<results.length){
-        $("#opcodes").append("<tr><td>  "+asHex(results[i].pc)+"</td><td>  "+results[i].name+"</td><td>("+asHex(results[i].opcode)+")</td><td>  "+asHex(results[i].param) +"</td></tr>");
+        $("#opcodes").append("<tr><td>"+asHex(results[i].pc)+"</td><td>"+padName(results[i].name)+"</td><td>("+asHex(results[i].opcode)+")</td><td>"+asHex(results[i].param) +"</td></tr>");
         i++;
     }
+*/
+
+    var container = $('#opcodes'),
+    table = $('<table class="table">');
+    container.html("");
+    results.forEach(function(result) {
+      var tr = $('<tr>');
+      ['pc', 'name', 'opcode','param'].forEach(function(attr) {
+        tr.append('<td>' + (attr=="name" ? padName(result[attr]) : (attr=="param" ? result[attr] : asHex(result[attr])) + '</td>'));
+      });
+      table.append(tr);
+    });
+
+    container.append(table);
+    $("</tr></table>");
 });
