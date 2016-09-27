@@ -43,7 +43,14 @@ var padName =function (n) {
 	return _.padEnd(n, 7, '\u00a0');
 }
 
-
+var label = function (i) {
+		const labels = ['primary', 'success', 'info', 'warning', 'danger'];
+		if (inst.isPush(i)) {
+			return `label label-default`;
+		}
+		const l = labels[i % labels.length];
+		return `label label-${l}`;
+	}
 
 var	parseCode=function(bytes) {
 		var pc = 0;

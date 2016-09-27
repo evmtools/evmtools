@@ -43,14 +43,15 @@ $("#target1").click( function() {
     var container = $('#opcodes'),
     table = $('<table class="table">');
     container.html("");
+
     results.forEach(function(result) {
       var tr = $('<tr>');
-      ['pc', 'name', 'opcode','param'].forEach(function(attr) {
-        tr.append('<td>' + (attr=="name" ? padName(result[attr]) : (attr=="param" ? result[attr] : asHex(result[attr])) + '</td>'));
-      });
+      tr.append('<td>' +asHex(result['pc']) + '</td></span>');
+      tr.append('<td><span class= "' +label(result['opcode'])+'"">' +padName(result['name'])+asHex(result['opcode']) + '</td></span>');
+      tr.append('<td>' +result['param'] + '</td>');
       table.append(tr);
     });
 
-    container.append(table);
     $("</tr></table>");
+    container.append(table);
 });
