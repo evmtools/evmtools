@@ -4,21 +4,16 @@ block content
   body
     .container-fluid
       h3.text-primary.text-center EVM tools
-      .row
-        .col-xs-6
-          .form-group
-            label(for='hexcode') Hexcode:
-            textarea#hexcode.form-control(rows='3')
-            button#target1.btn.btn-default.target Done
-            br
-            br
-            label(for='opcodes') Opcodes:
-            .panel.panel-default
-            #opcodes.panel-body opcodes Content
-        .col-xs-6
-          label Source:
-          .panel.panel-default
-          #source.panel-body Source Content
+      .form-group
+        label(for='hexcode') Hexcode:
+        textarea#hexcode.form-control(rows='2')
+        button#target1.btn.btn-default.target Done
+        br
+        br
+        label(for='opcodes') Opcodes:
+        .panel.panel-default
+        #opcodes.panel-body opcodes Content
+
 
 block codeJs
    script(src='/OpCodesList.js')

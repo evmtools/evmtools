@@ -47,7 +47,7 @@ $("#target1").click( function() {
     results.forEach(function(result) {
       var tr = $('<tr>');
       tr.append('<td>' +asHex(result['pc']) + '</td></span>');
-      tr.append('<td><span class= "' +label(result['opcode'])+'"">' +padName(result['name'])+asHex(result['opcode']) + '</td></span>');
+      tr.append('<td><span class= "' +label(result['opcode'])+'"">' +padName(result['name']) + '</td></span>');
       tr.append('<td>' +result['param'] + '</td>');
       table.append(tr);
     });
