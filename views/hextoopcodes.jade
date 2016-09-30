@@ -14,22 +14,29 @@ block content
                       a.navbar-brand(href="/") EVM tools
                   div(class="collapse navbar-collapse")
                       ul(class="nav navbar-nav")
-                          li
+                          li.active
                               a(href="/hextoopcodes") HEX to Opcodes
                           li
                               a(href="/opcodestohex") Opcodes to HEX
 
-          .container
-              h1 EVM tools
-              p.lead
-                  | hex to opcodes.<br>
-                  | And opcodes to hex.
+          //- .container
+          //-     h1 EVM tools
+          //-     p.lead
+          //-         | hex to opcodes.
 
-      #footer
           .container
-              p(class="text-muted credit")
-                  | credits <a href="http://www.google.com">here</a>
+            br
+            textarea#hexcode.form-control(rows='2')
+            button#target1.btn.btn-default.target Done
+            br
+            br
+            .panel.panel-default
+            #opcodes.panel-body opcodes Content
 
+      //- #footer
+      //-     .container
+      //-         p(class="text-muted credit")
+      //-             | link <a href="http://www.google.com">here</a>
 
 
 block codeJs

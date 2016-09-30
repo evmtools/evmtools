@@ -16,20 +16,26 @@ block content
                       ul(class="nav navbar-nav")
                           li
                               a(href="/hextoopcodes") HEX to Opcodes
-                          li
+                          li.active
                               a(href="/opcodestohex") Opcodes to HEX
 
-          .container
-              h1 EVM tools
-              p.lead
-                  | hex to opcodes.<br>
-                  | And opcodes to hex.
+          //- .container
+          //-     h1 EVM tools
+          //-     p.lead
+          //-         | hex to opcodes.
 
-      #footer
           .container
-              p(class="text-muted credit")
-                  | credits <a href="http://www.google.com">here</a>
+            br
+            textarea#opcodes.form-control(rows='20')
+            br
+            br
+            .panel.panel-default
+            #opcodes.panel-body opcodes Content
 
+      //- #footer
+      //-     .container
+      //-         p(class="text-muted credit")
+      //-             | link <a href="http://www.google.com">here</a>
 
 
 block codeJs
