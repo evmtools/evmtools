@@ -27,10 +27,11 @@ block content
           .container
             br
             textarea#opcodes.form-control(rows='20')
+            button#target1.btn.btn-default.target Done
             br
             br
             .panel.panel-default
-            #opcodes.panel-body opcodes Content
+            #hex.panel-body hex Content
 
       //- #footer
       //-     .container
@@ -41,4 +42,6 @@ block content
 block codeJs
    script(src='/OpCodesList.js')
    script(src='/OpCodes.js')
-   script(src='/ToOpcodes.js')
+   //- script(src='/ToOpcodes.js')
+   script(src='/ToHex.js')
+

@@ -8,11 +8,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/hextoopcodes', function(req, res, next) {
-  res.render('hextoopcodes', { title: 'EVM tools 1' });
+  res.render('hextoopcodes', { title: 'EVM tools' });
 });
 
 router.get('/opcodestohex', function(req, res, next) {
-  res.render('opcodestohex', { title: 'EVM tools 2' });
+  res.render('opcodestohex', { title: 'EVM tools' });
 });
 
 module.exports = router;
